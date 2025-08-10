@@ -1,0 +1,42 @@
+package cp_9_03;
+
+public class Team {
+    // TODO: Declare private fields - teamName, teamWins, teamLosses
+    private String teamName;
+    private int teamWins;
+    private int teamLosses;
+
+    
+    public void setTeamName(String name) {
+        teamName = name;
+    }
+
+    public void setTeamWins(int wins) {
+        teamWins = wins;
+    }
+
+    public void setTeamLosses(int losses) {
+        teamLosses = losses;
+    }
+    
+    public String getTeamName() {
+        return teamName;
+    }
+
+    public int getTeamWins() {
+        return teamWins;
+    }
+
+    public int getTeamLosses() {
+        return teamLosses;
+    }
+    
+    public double getWinPercentage() {
+        int totalGames = teamWins + teamLosses;
+        if (totalGames == 0) {
+            return 0.0; // Avoid divide by zero
+        }
+        return (double) teamWins / totalGames;
+    }
+
+}
